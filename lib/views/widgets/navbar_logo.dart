@@ -7,7 +7,10 @@ class NavbarLogo extends StatelessWidget {
       height: 80,
       width: 150,
       child: Center(
-        child: Text('키덕'),
+        child: Text(
+          '키덕',
+          style: TextStyle(fontSize: 18),
+        ),
       ),
     );
   }

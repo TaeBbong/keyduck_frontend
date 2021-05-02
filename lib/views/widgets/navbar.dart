@@ -27,11 +27,13 @@ class NavbarDesktopTablet extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              NavbarItem('Home'),
+              NavbarItem('홈'),
               SizedBox(width: 60),
-              NavbarItem('Keyboards'),
+              NavbarItem('키보드'),
               SizedBox(width: 60),
-              NavbarItem('Contacts'),
+              NavbarItem('게시판'),
+              SizedBox(width: 60),
+              NavbarItem('게임'),
             ],
           ),
           NavbarMember(),
