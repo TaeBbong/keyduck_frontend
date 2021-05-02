@@ -6,8 +6,8 @@ class NavbarLogo extends StatelessWidget {
     return SizedBox(
       height: 80,
       width: 150,
-      child: Container(
-        color: Colors.yellow,
+      child: Center(
+        child: Text('키덕'),
       ),
     );
   }

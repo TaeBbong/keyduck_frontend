@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:keyboard_duckhoo/views/widgets/navbar_item.dart';
 import 'package:keyboard_duckhoo/views/widgets/navbar_logo.dart';
+import 'package:keyboard_duckhoo/views/widgets/navbar_member.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Navbar extends StatelessWidget {
@@ -32,7 +33,8 @@ class NavbarDesktopTablet extends StatelessWidget {
               SizedBox(width: 60),
               NavbarItem('Contacts'),
             ],
-          )
+          ),
+          NavbarMember(),
         ],
       ),
     );
@@ -42,7 +44,7 @@ class NavbarDesktopTablet extends StatelessWidget {
 class NavbarMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 80,
       child: Row(
         mainAxisSize: MainAxisSize.max,
@@ -53,6 +55,13 @@ class NavbarMobile extends StatelessWidget {
             icon: Icon(Icons.menu),
           ),
           NavbarLogo(),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.menu,
+              color: Colors.transparent,
+            ),
+          ),
         ],
       ),
     );
