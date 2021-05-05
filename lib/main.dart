@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:keyboard_duckhoo/views/pages/index_page.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(MyApp());
 }
 
