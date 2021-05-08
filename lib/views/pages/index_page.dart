@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:keyboard_duckhoo/views/widgets/banner.dart';
 import 'package:keyboard_duckhoo/views/widgets/navbar.dart';
 import 'package:keyboard_duckhoo/views/widgets/navbar_drawer.dart';
+import 'package:keyboard_duckhoo/views/widgets/slider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class IndexPage extends StatelessWidget {
@@ -10,6 +12,7 @@ class IndexPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _scrollController = ScrollController();
     return ResponsiveBuilder(builder: (context, size) {
       return Scaffold(
         appBar: size.deviceScreenType == DeviceScreenType.mobile
@@ -29,11 +32,25 @@ class IndexPage extends StatelessWidget {
         drawer: size.deviceScreenType == DeviceScreenType.mobile
             ? NavDrawer()
             : null,
-        body: Container(
-          child: Center(
-            child: Text('hihi'),
-          ),
-        ),
+        body: size.deviceScreenType == DeviceScreenType.mobile
+            ? ListView(
+                children: [
+                  MobileMainBanner(),
+                  MobileItemSlider(),
+                  MobileItemSlider(),
+                ],
+              )
+            : Scrollbar(
+                isAlwaysShown: true,
+                controller: _scrollController,
+                child: ListView(
+                  children: [
+                    MainBanner(),
+                    ItemSlider(),
+                    ItemSlider(),
+                  ],
+                ),
+              ),
       );
     });
   }

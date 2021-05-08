@@ -25,8 +25,9 @@ class NavDrawerHeader extends StatelessWidget {
       color: Colors.orange,
       height: 200,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          Container(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -35,6 +36,16 @@ class NavDrawerHeader extends StatelessWidget {
                 backgroundColor: Colors.transparent,
               ),
               Text('안녕하세요'),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              1 == 1 ? Text('로그인') : Text('로그아웃'),
+              Padding(
+                padding: EdgeInsets.all(10),
+              ),
+              Text('마이페이지'),
             ],
           )
         ],
