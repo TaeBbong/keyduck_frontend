@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:keyboard_duckhoo/views/widgets/banner.dart';
+import 'package:keyboard_duckhoo/views/widgets/footer.dart';
 import 'package:keyboard_duckhoo/views/widgets/navbar.dart';
 import 'package:keyboard_duckhoo/views/widgets/navbar_drawer.dart';
 import 'package:keyboard_duckhoo/views/widgets/slider.dart';
@@ -38,6 +39,7 @@ class IndexPage extends StatelessWidget {
                   MobileMainBanner(),
                   MobileItemSlider(),
                   MobileItemSlider(),
+                  MobileFooter(),
                 ],
               )
             : Scrollbar(
@@ -48,6 +50,7 @@ class IndexPage extends StatelessWidget {
                     MainBanner(),
                     ItemSlider(),
                     ItemSlider(),
+                    Footer(),
                   ],
                 ),
               ),
