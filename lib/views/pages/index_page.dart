@@ -37,7 +37,17 @@ class IndexPage extends StatelessWidget {
             ? ListView(
                 children: [
                   MobileMainBanner(),
+                  Padding(padding: EdgeInsets.all(10)),
+                  Text(
+                    '게임에 몰입하고 싶다면',
+                    style: TextStyle(fontSize: 30),
+                  ),
                   MobileItemSlider(),
+                  Padding(padding: EdgeInsets.all(10)),
+                  Text(
+                    '게임에 몰입하고 싶다면',
+                    style: TextStyle(fontSize: 30),
+                  ),
                   MobileItemSlider(),
                   MobileFooter(),
                 ],
