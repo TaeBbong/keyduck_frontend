@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:keyboard_duckhoo/views/widgets/navbar_item.dart';
-import 'package:keyboard_duckhoo/views/widgets/navbar_logo.dart';
-import 'package:keyboard_duckhoo/views/widgets/navbar_member.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Navbar extends StatelessWidget {
@@ -66,6 +63,51 @@ class NavbarMobile extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class NavbarMember extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 80,
+      width: 150,
+      child: Center(
+        child: Text(
+          '키덕',
+          style: TextStyle(fontSize: 18),
+        ),
+      ),
+    );
+  }
+}
+
+class NavbarLogo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 80,
+      width: 150,
+      child: Center(
+        child: Text(
+          '키덕',
+          style: TextStyle(fontSize: 18),
+        ),
+      ),
+    );
+  }
+}
+
+class NavbarItem extends StatelessWidget {
+  final String title;
+  const NavbarItem(this.title);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: TextStyle(fontSize: 18),
     );
   }
 }

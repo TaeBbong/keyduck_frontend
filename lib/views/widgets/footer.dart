@@ -5,6 +5,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Copyright 밍기원정대, 2021 ALL RIGHTS RESERVED'),
           Padding(
