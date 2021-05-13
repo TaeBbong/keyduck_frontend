@@ -45,7 +45,7 @@ class IndexPage extends StatelessWidget {
                   MobileItemSlider(),
                   Padding(padding: EdgeInsets.all(10)),
                   Text(
-                    '게임에 몰입하고 싶다면',
+                    '사무실에서 조용히',
                     style: TextStyle(fontSize: 30),
                   ),
                   MobileItemSlider(),
@@ -58,7 +58,17 @@ class IndexPage extends StatelessWidget {
                 child: ListView(
                   children: [
                     MainBanner(),
+                    Padding(padding: EdgeInsets.all(10)),
+                    Text(
+                      '게임에 몰입하고 싶다면',
+                      style: TextStyle(fontSize: 30),
+                    ),
                     ItemSlider(),
+                    Padding(padding: EdgeInsets.all(10)),
+                    Text(
+                      '게임에 몰입하고 싶다면',
+                      style: TextStyle(fontSize: 30),
+                    ),
                     ItemSlider(),
                     Footer(),
                   ],
