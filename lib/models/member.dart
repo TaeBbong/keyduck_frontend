@@ -1,10 +1,13 @@
 import 'package:equatable/equatable.dart';
 
 class Member extends Equatable {
-  const Member();
+  final String id;
+  const Member(this.id);
 
   @override
   List<Object> get props {
-    return [];
+    return [id];
   }
+
+  static const empty = Member('-');
 }
