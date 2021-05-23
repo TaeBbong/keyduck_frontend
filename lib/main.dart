@@ -4,6 +4,8 @@ import 'package:keyboard_duckhoo/blocs/auth/bloc/auth_bloc.dart';
 import 'package:keyboard_duckhoo/repositories/auth_repository.dart';
 import 'package:keyboard_duckhoo/repositories/member_repository.dart';
 import 'package:keyboard_duckhoo/views/pages/index_page.dart';
+import 'package:keyboard_duckhoo/views/pages/login_page.dart';
+import 'package:keyboard_duckhoo/views/pages/register_page.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() {
@@ -51,30 +53,35 @@ class _MainAppState extends State<MainApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: _navigatorKey,
-      builder: (context, child) {
-        return BlocListener<AuthBloc, AuthState>(
-          listener: (context, state) {
-            switch (state.status) {
-              case AuthStatus.authenticated:
-                _navigator.pushAndRemoveUntil<void>(
-                  IndexPage.route(),
-                  (route) => false,
-                );
-                break;
-              case AuthStatus.unauthenticated:
-                _navigator.pushAndRemoveUntil<void>(
-                  IndexPage.route(),
-                  (route) => false,
-                );
-                break;
-              default:
-                break;
-            }
-          },
-          child: child,
-        );
+      // builder: (context, child) {
+      //   return BlocListener<AuthBloc, AuthState>(
+      //     listener: (context, state) {
+      //       switch (state.status) {
+      //         case AuthStatus.authenticated:
+      //           _navigator.pushAndRemoveUntil<void>(
+      //             IndexPage.route(),
+      //             (route) => false,
+      //           );
+      //           break;
+      //         case AuthStatus.unauthenticated:
+      //           _navigator.pushAndRemoveUntil<void>(
+      //             LoginPage.route(),
+      //             (route) => false,
+      //           );
+      //           break;
+      //         default:
+      //           break;
+      //       }
+      //     },
+      //     child: child,
+      //   );
+      // },
+      // onGenerateRoute: (_) => IndexPage.route(),
+      routes: {
+        '/': (_) => IndexPage(),
+        '/register': (_) => RegisterPage(),
+        '/login': (_) => LoginPage(),
       },
-      onGenerateRoute: (_) => IndexPage.route(),
     );
   }
 }

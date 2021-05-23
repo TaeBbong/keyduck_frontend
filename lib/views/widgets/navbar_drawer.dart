@@ -41,11 +41,30 @@ class NavDrawerHeader extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              1 == 1 ? Text('로그인') : Text('로그아웃'),
+              1 == 1
+                  ? InkWell(
+                      child: Text('로그인'),
+                      onTap: () {
+                        Navigator.of(context).popAndPushNamed('/login');
+                      },
+                    )
+                  : InkWell(
+                      child: Text('로그아웃'),
+                      onTap: () {}, // logout
+                    ),
               Padding(
                 padding: EdgeInsets.all(10),
               ),
               Text('마이페이지'),
+              Padding(
+                padding: EdgeInsets.all(10),
+              ),
+              InkWell(
+                child: Text('회원가입'),
+                onTap: () {
+                  Navigator.of(context).popAndPushNamed('/register');
+                },
+              )
             ],
           )
         ],
